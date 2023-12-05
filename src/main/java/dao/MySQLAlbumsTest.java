@@ -1,7 +1,7 @@
 package dao;
 
-public class MySQLAlbumsException extends RuntimeException {
-    public MySQLAlbumsException(String msg) {
+public class MySQLAlbumsTest extends RuntimeException {
+    public MySQLAlbumsTest(String msg) {
         super(msg);
     }
 }
