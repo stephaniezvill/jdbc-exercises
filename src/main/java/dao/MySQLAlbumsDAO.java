@@ -6,10 +6,9 @@ import config.Config;
 import java.sql.*;
 
 public class MySQLAlbumsDAO {
-    // initialize the connection to null so we know whether or not to close it when done
     private Connection connection = null;
 
-    public void createConnection() throws MySQLAlbumsTest {
+    public void createConnection() throws MySQLAlbumsException {
         System.out.print("Trying to connect... ");
         try {
             //TODO: create the connection and assign it to the instance variable
@@ -24,11 +23,11 @@ public class MySQLAlbumsDAO {
             );
             System.out.println("connection created.");
         } catch (SQLException e) {
-            throw new MySQLAlbumsTest("connection failed!!!");
+            throw new MySQLAlbumsException("connection failed!!!");
         }
     }
 
-    public int getTotalAlbums() throws MySQLAlbumsTest {
+    public int getTotalAlbums() throws MySQLAlbumsException {
         int count = 0;
         try {
             //TODO: fetch the total number of albums from the albums table and assign it to the local variable
@@ -51,7 +50,7 @@ public class MySQLAlbumsDAO {
 
 
         } catch (SQLException e) {
-            throw new MySQLAlbumsTest("Error executing query: " + e.getMessage() + "!!!");
+            throw new MySQLAlbumsException("Error executing query: " + e.getMessage() + "!!!");
         }
         return count;
     }

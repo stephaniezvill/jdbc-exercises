@@ -5,3 +5,4 @@ public class MySQLAlbumsException extends RuntimeException {
         super(msg);
     }
 }
+

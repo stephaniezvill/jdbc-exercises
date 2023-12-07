@@ -7,11 +7,11 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-class MySQLDAO {
+public class MySQLDAO {
     // initialize the connection to null so we know whether or not to close it when done
     protected Connection connection = null;
 
-    public void createConnection() throws MySQLAlbumsTest {
+    public void createConnection() throws MySQLAlbumsException {
         System.out.print("Trying to connect... ");
         try {
             //TODO: create the connection and assign it to the instance variable
@@ -26,7 +26,7 @@ class MySQLDAO {
             );
             System.out.println("connection created.");
         } catch (SQLException e) {
-            throw new MySQLAlbumsTest("connection failed!!!");
+            throw new MySQLAlbumsException("connection failed!!!");
         }
     }
 

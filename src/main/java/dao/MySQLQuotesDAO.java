@@ -4,20 +4,18 @@ import com.mysql.cj.jdbc.Driver;
 import config.Config;
 import models.Quote;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
+import java.sql.*;
+import java.util.ArrayList;
 import java.util.List;
 
 public class MySQLQuotesDAO {
-    // initialize the connection to null so we know whether or not to close it when done
-    protected Connection connection = null;
 
-    public void createConnection() throws MySQLAlbumsTest {
-        System.out.print("Trying to connect... ");
+    private Connection connection = null;
+
+    public void createConnection(){
+        System.out.println("Connecting to db...");
         try {
-            //TODO: create the connection and assign it to the instance variable
-// register driver
+            // register driver
             DriverManager.registerDriver(new Driver());
 
             // establish connection
@@ -26,27 +24,52 @@ public class MySQLQuotesDAO {
                     Config.getUser(),
                     Config.getPassword()
             );
-            System.out.println("connection created.");
-        } catch (SQLException e) {
-            throw new MySQLAlbumsTest("connection failed!!!");
+        } catch (SQLException sqlx){
+            System.out.println("Error connecting to db ..." + sqlx.getMessage());
         }
     }
 
-    public void closeConnection() {
-        if(connection == null) {
-            System.out.println("Connection aborted.");
-            return;
-        }
+    public List<Quote> getQuotes(){
+        List<Quote> quotes = new ArrayList<>();
         try {
-            //TODO: close the connection
-            connection.close();
-            System.out.println("Connection closed.");
-        } catch(SQLException e) {
-            // ignore this
+            // Create statement object
+            Statement statement = connection.createStatement();
+
+            // Execute statement
+            ResultSet resultSet = statement.executeQuery("SELECT * FROM quotes");
+            while(resultSet.next()){
+                quotes.add(new Quote(
+                        resultSet.getString("author"),
+                        resultSet.getString("content")
+                ));
+            }
+        } catch (SQLException sqlx){
+            System.out.println(sqlx.getMessage());
+        }
+        return quotes;
+    }
+
+    public void closeConnection(){
+        System.out.println("Closing DB connection ... ");
+        if (connection != null){
+            try {
+                connection.close();
+            } catch (SQLException sqlx){
+                System.out.println(sqlx.getMessage());
+            }
         }
     }
 
-    public List<Quote> getQuotes() {
-        return null;
+
+    public long insertQuote(){
+
+        // create a connection
+
+        // create and execute statement
+
+        // close connection
+
+        return 0;
     }
+
 }

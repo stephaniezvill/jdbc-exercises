@@ -5,12 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="35697b34-18ee-4d73-9b7c-19c96de1837f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/contactsmanager/Contact.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/contactsmanager/ContactsDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/contactsmanager/ContactsManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/contactsmanager/FileContactsDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/contactsmanager/MySQLContactsDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/079e0506-74b9-49ef-a4ee-aab86570e98f.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/079e0506-74b9-49ef-a4ee-aab86570e98f.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/079e0506-74b9-49ef-a4ee-aab86570e98f/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/079e0506-74b9-49ef-a4ee-aab86570e98f/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dao/MySQLAlbumsDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/MySQLAlbumsDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/MySQLAlbumsException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/MySQLAlbumsException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dao/MySQLAlbumsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/MySQLAlbumsTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dao/MySQLDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/MySQLDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dao/MySQLQuotesDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/MySQLQuotesDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/MySQLUsersDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/MySQLUsersDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/QuotesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/QuotesTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lectures/PSTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lectures/PSTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lectures/UserInputTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lectures/UserInputTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/Quote.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Quote.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,12 +36,19 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
@@ -44,6 +67,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/stephanievillarreal/IdeaProjects/jdbc-exercises",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -66,8 +90,44 @@
     <key name="CreateClassDialog.RecentsKey">
       <recent name="dao" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java" />
+      <recent name="$PROJECT_DIR$/data" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="contacts_manager" />
+    </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.ContactsManager">
+    <configuration name="ContactsManager" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="contactsmanager.ContactsManager" />
+      <module name="jdbc-exercises" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="contactsmanager.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PSTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="lectures.PSTest" />
+      <module name="jdbc-exercises" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="lectures.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="QuotesTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="dao.QuotesTest" />
       <module name="jdbc-exercises" />
@@ -81,8 +141,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="UserInputTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="lectures.UserInputTest" />
+      <module name="jdbc-exercises" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="lectures.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ContactsManager" />
+        <item itemvalue="Application.PSTest" />
+        <item itemvalue="Application.UserInputTest" />
         <item itemvalue="Application.QuotesTest" />
       </list>
     </recent_temporary>
@@ -97,6 +173,18 @@
       <updated>1701798294868</updated>
       <workItem from="1701798295858" duration="4188000" />
       <workItem from="1701806101474" duration="2387000" />
+      <workItem from="1701808499683" duration="3444000" />
+      <workItem from="1701875872945" duration="2019000" />
+      <workItem from="1701878099622" duration="41000" />
+      <workItem from="1701878183535" duration="323000" />
+      <workItem from="1701878543311" duration="303000" />
+      <workItem from="1701879030379" duration="587000" />
+      <workItem from="1701879624105" duration="541000" />
+      <workItem from="1701880179554" duration="329000" />
+      <workItem from="1701880551240" duration="207000" />
+      <workItem from="1701880765672" duration="136000" />
+      <workItem from="1701880906601" duration="8000" />
+      <workItem from="1701880986923" duration="31753000" />
     </task>
     <servers />
   </component>
